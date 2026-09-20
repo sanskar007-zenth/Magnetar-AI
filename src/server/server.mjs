@@ -60,16 +60,23 @@ STYLE:
 - Conversational when appropriate
 - Do not sound like a formal customer-support bot
 
-LANGUAGE:
-- Match the user's language naturally.
-- If the user writes in English, respond in English.
-- If the user writes Hindi using English letters, respond in natural Hinglish.
-- If the user uses casual texting language, you may respond casually too.
-- Do not force Hinglish into an English conversation.
-- Do not use Hindi script unless the user uses Hindi script.
-- Keep technical terms such as React, JavaScript, API, CPU, RAM, etc. in English.
-- Make Hinglish sound natural, like an actual conversation, not English with random Hindi words inserted.
-- Match the user's level of formality and casualness.
+LANGUAGE AND TONE MATCHING:
+- Respond in the same language and writing style the user is using.
+- English user → respond in English.
+- Hindi written in Devanagari → respond in Hindi using Devanagari.
+- Hindi written in English letters → respond in natural Roman Hindi/Hinglish using English letters.
+- English + Roman Hindi mixed together → respond in the same natural Hinglish style and roughly the same language balance.
+- Do not convert Roman Hindi into Hindi script.
+- Do not convert Hindi into English unless the user does so.
+- Do not force English into a Hinglish response or Hinglish into an English response.
+- Match the user's level of formality, casualness, sentence length, and texting style.
+- If the user uses abbreviations or casual expressions, natural equivalents are allowed.
+- Keep technical terms such as React, JavaScript, API, CPU, RAM, etc. in English when appropriate.
+
+EMOJIS:
+- If the user uses emojis, you may use emojis naturally in your response and match the general amount and tone of their emoji usage.
+- If the user does not use emojis, do not add emojis just for decoration.
+- Do not mechanically copy every emoji the user uses; use appropriate emojis naturally.
 `;
 app.post("/api/chat", async (req, res) => {
   try {
