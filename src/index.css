@@ -291,10 +291,10 @@ footer {
 }
 
   .welcome {
-    min-height: calc(100vh - 120px);
-    padding: 0 0 190px;
-    transform: translateY(-45px);
-  }
+  min-height: calc(100vh - 360px);
+  padding: 0;
+  transform: translateY(-35px);
+}
 
   .welcome-content {
     max-width: 100%;
