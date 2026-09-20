@@ -62,7 +62,7 @@ const copyResponse = async (text) => {
     abortControllerRef.current = controller;
 
     try {
-      const response = await fetch("http://localhost:3001/api/chat", {
+      const response = await fetch("https://magnetar-ai.onrender.com/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
